@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC, useState } from "react";
 import "./App.css";
 import { Itask } from "./Interface";
-import Todo from "./components/Todo";
+import Todo from "../TODO/Todo";
 const App: FC = () => {
   const [task, setTask] = useState<string>("");
   const [days, setDays] = useState<number>(0);
