@@ -1,4 +1,4 @@
-export type Action = { type: "ADD_NOTE"; payload: string };
+export type Action = { type: string; payload: string };
 
 export const addNote = (note: string): Action => ({
   type: "ADD_NOTE",

@@ -21,11 +21,13 @@ const App: FC = () => {
     setDays(0);
     console.log("todo", todo);
   };
-const deleteTask=(taskNameToDelete:string):void=>{
-setTodo(todo.filter((task)=>{
-  return task.taskName != taskNameToDelete
-}))
-}
+  const deleteTask = (taskNameToDelete: string): void => {
+    setTodo(
+      todo.filter((task) => {
+        return task.taskName != taskNameToDelete;
+      })
+    );
+  };
   return (
     <div className="App">
       <div className="header">
@@ -48,8 +50,8 @@ setTodo(todo.filter((task)=>{
         <button onClick={addTask}>ADD TASK</button>
       </div>
       <div className="todoList">
-        {todo.map((task:Itask, key:number) => {
-          return <Todo key={key} task={task} deleteTask={deleteTask}/>;
+        {todo.map((task: Itask, key: number) => {
+          return <Todo key={key} task={task} deleteTask={deleteTask} />;
         })}
       </div>
     </div>

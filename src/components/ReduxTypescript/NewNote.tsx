@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState } from "react";
+import { Button } from "react-bootstrap";
 import './NewNote.css';
 interface NewNoteProps {
   addNote(note: string): void;
@@ -23,7 +24,8 @@ const NewNote: React.FC<NewNoteProps> = ({ addNote }) => {
         name="note"
         placeholder="ADD NOTE"
       /><br></br><br></br>
-      <button onClick={onAddNote}>ADD NOTE</button>
+      <Button variant="primary" onClick={onAddNote}>ADD NOTE</Button>
+      
     </div>
   );
 };

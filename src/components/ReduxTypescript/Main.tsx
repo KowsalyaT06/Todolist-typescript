@@ -15,8 +15,8 @@ const Main = () => {
   return (
     <>
       <NewNote addNote={onaddNote} />
-      <hr />
-      <ul>
+     
+      <ul className="newnotes">
         {notes.map((note) => {
           return <li key={note}>{note}</li>;
         })}
